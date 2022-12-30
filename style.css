@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: Monocraft;
   src: url(Monocraft.ttf)
@@ -12,6 +13,10 @@ html, body {
 table {
   width: 100%;
   height: 100%;
+}
+
+.QUERY {
+  font-family: Monocraft;
 }
 
 .code {
@@ -30,22 +35,23 @@ table {
 
 
 .example, .example-hide {
-  width: 75px;
+  width: 8vh;
 }
 
 .example > button {
   font-family: Monocraft;
   border: none;
   background-color: orange;
+  color: black;
   width: 100%;
   height: 100%;
 }
 
 .example > button:hover {
   font-family: Monocraft;
-  color: white;
   border: none;
   background-color: #ff00ff;
+  color: white;
   width: 100%;
   height: 100%;
 }
@@ -66,10 +72,8 @@ table {
 }
 
 table {
-  /* white-space: pre-wrap; */
   border-spacing: 1vh 1vh;
   table-layout:fixed;
-  /* width:100%; */
 }
 
 .table-example {
@@ -111,20 +115,20 @@ input {
 .cm-link {text-decoration: underline;}
 .cm-strikethrough {text-decoration: line-through;}
 
-.cm-keyword {color: #f08;}
+.cm-keyword {color: #ff659c;}
 .cm-atom {color: #219;}
-.cm-number {color: #1f4;}
+.cm-number {color: #aaaffd;}
 .cm-def {color: #07f;}
-.cm-variable {color: #0fa;},
-.cm-punctuation,
-.cm-property,
-.cm-operator {}
-.cm-variable-2 {color: #0fa;}
-.cm-variable-3, .cm-type {color: #085;}
-.cm-comment {color: #a50;}
-.cm-string {color: #f11;}
-.cm-string-2 {color: #f50;}
-.cm-meta {color: #999;}
+.cm-variable {color: #73dfa5;}
+.cm-variable-2 {color: #ffaa00;}
+.cm-variable-3, .cm-type {color: #30a;}
+.cm-punctuation {color: #aa0000;}
+.cm-property {color: #aa0000;}
+.cm-operator {color: #ffffff;}
+.cm-comment {color: #807796;}
+.cm-string {color: #dfd473;}
+.cm-string-2 {color: #f51575;}
+.cm-meta {color: #73dfa5;}
 .cm-qualifier {color: #555;}
 .cm-builtin {color: #30a;}
 .cm-bracket {color: #997;}

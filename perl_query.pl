@@ -1,3 +1,78 @@
+@A = (@B, @A)
+---
+shorter unshift @B to @A
+***
+@A = (@A, @B)
+---
+shorter push @B to @A
+***
+@A[-$N..-1]
+---
+slice the last $N items list @A
+***
+/$/
+---
+store outer $_ into $` if // and $' doesn't work (// will try to use prev regex)
+iii
+3 5
+1
+6
+4
+ccc
+# https://atcoder.jp/contests/abc215/submissions/25248485
+<>;
+@$_ | /:/ || map @{$_ * $`} = 1, /$/ .. 1e5 / $` for glob `factor`;
+@A = grep $#$_, 1..$';
+print @A . "
+@A"
+ooo
+2
+1 5
+***
+$A | $B && $C & $D
+# ($A || $B) && ($C && $D)
+---
+higher precedence logical comparisons (ensure they are boolean)
+***
+$#A
+---
+-1 (if nothing in @A)
+iii
+ccc
+$a = 3;
+print $#A ** ($a == 3)
+ooo
+-1
+***
+~~map /ABC/g, $S
+---
+count how many matches in string $S (work with list too)
+***
+$S !~ /\d/
+---
+check of $S does not match the regex
+iii
+ccc
+$S = "achicken";
+print $S !~ /\d/ ? ya : no
+ooo
+no
+***
+<> !~ $"
+---
+split input by $" into $` $' and return 0
+iii
+3 5
+ccc
+print $` * $' + $_, $/ for <> !~ $" .. 5
+ooo
+15
+16
+17
+18
+19
+20
+***
 $H{print "bruh"; 3}
 ---
 evaluate code block and index hash %H
@@ -28,8 +103,14 @@ convert base 2 string $S to decimal (store in $n)
 ---
 range 30 to 50 in reverse order
 iii
-ooo
 ccc
+print "." x -$_, $/ for -5..-1
+ooo
+.....
+....
+...
+..
+.
 ***
 /(.)(?1)/
 ---
@@ -240,6 +321,21 @@ $N = 3;
 print "$N" + ($N += 3)
 ooo
 9
+iii
+ccc
+print "$_
+" x (s/.(??{$& + 1})//g > 1) for 1..2301
+ooo
+1201
+1212
+1223
+1234
+1245
+1256
+1267
+1278
+1289
+2301
 ***
 $a ? chicken : onion
 ---
@@ -587,7 +683,7 @@ unpack list @A into $a (first elem), $b (second elem), and @B (rest)
 ***
 $^F
 ---
-2
+2 (on anagol you can use $\x06 (2 bytes))
 ***
 ${ \(1 + 1) }
 ---
@@ -811,7 +907,7 @@ ooo
 ***
 qw(  a   b  c)
 ---
-quote words: split raw string on whitespace /\s*/
+quote words: split raw string on whitespace /\s+/
 iii
 ccc
 $c = "bruh";
